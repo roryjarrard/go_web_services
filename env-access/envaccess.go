@@ -9,7 +9,6 @@ import (
 func LoadEnvironment() {
 	env := os.Args[1]
 	godotenv.Load(".env." + env)
-
 }
 
 func GetKey(key string) string {
