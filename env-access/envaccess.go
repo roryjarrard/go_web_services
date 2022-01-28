@@ -6,9 +6,9 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func LoadEnvironment() {
-	env := os.Args[1]
-	godotenv.Load(".env." + env)
+func LoadEnvironment() error {
+	env := GetKey("env")
+	return godotenv.Load(".env." + env)
 }
 
 func GetKey(key string) string {
