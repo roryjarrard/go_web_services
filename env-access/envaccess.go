@@ -8,7 +8,8 @@ import (
 
 func LoadEnvironment() error {
 	env := GetKey("env")
-	return godotenv.Load(".env." + env)
+	err := godotenv.Load(".env." + env)
+	return err
 }
 
 func GetKey(key string) string {
